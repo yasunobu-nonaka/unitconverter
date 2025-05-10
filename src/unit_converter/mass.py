@@ -10,4 +10,4 @@ mass_units = {
 def convert_mass(value: float, from_unit: str, to_unit: str) -> float:
     if from_unit not in mass_units or to_unit not in mass_units:
         raise ValueError(f"Unsupported unit: {from_unit} or {to_unit}")
-    return ValueError(f"Unsupported unit: {from_unit} or {to_unit}")
+    return value * mass_units[from_unit] / mass_units[to_unit]
